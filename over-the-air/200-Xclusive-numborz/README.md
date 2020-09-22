@@ -1,6 +1,4 @@
-# 200 - Name Unknown
-
-(This is a challenge that doesn't have a name yet)
+# 200 - Xclusive Numborz
 
 ## Description
 
@@ -12,8 +10,8 @@ All challenges in the Over The Air category are deployed to an OCI instance stre
 
 ## Challenge
 
-I was watching my regularly scheduled state sponsored programming when I got some strange interference. It sounded like a little girl was talking to me but I couldn't understand what she was saying. Can you figure it out?
+I was watching my regularly scheduled state sponsored programming when I got some strange interference. It sounded like a little girl was talking to me but I couldn't understand what she was saying. Can you figure it out? There's no space for mistakes, and no room for questions.
 
-twitch.tv/[CHANNEL NAME HERE]
+twitch.tv/over_the_air
 
 Flag: `BSidesPDX{th3_numb3rs_sp34k_4_th3ms3lv3s}`
