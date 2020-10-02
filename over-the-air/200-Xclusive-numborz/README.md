@@ -14,4 +14,6 @@ I was watching my regularly scheduled state sponsored programming when I got som
 
 twitch.tv/over_the_air
 
+Author(s): 0xdade & fdcarl
+
 Flag: `BSidesPDX{th3_numb3rs_sp34k_4_th3ms3lv3s}`
