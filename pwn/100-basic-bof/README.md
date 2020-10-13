@@ -12,9 +12,9 @@ In `src/`, run `./compile.sh`. Then, the `Dockerfile` is ready to go. Provide `b
 
 ## Challenge
 
-Can you break into the flag vault?
+Welcome to basic bof. Just ret to one\_gadget as a warmup.
 
-Author(s): aagallag
+Author(s): arinerron
 
-Flag: `BSidesPDX{g00d_crypt0_1s_h4rd_70_d0!>>}`
+Flag: `BSidesPDX{r3t_t0-0ne_g@dg3t}`
 
