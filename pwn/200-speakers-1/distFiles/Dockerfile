@@ -24,15 +24,15 @@ RUN mkdir /home/ctf/bin && \
     cp /bin/cat /home/ctf/bin
 
 COPY ./ctf.xinetd /etc/xinetd.d/ctf
-COPY ./basic-heap /basic-heap
+COPY ./speakers-1 /speakers-1
 COPY ./start.sh /start.sh
 RUN echo "Blocked by ctf_xinetd" > /etc/banner_fail
 
 COPY ./flag.txt /flag.txt
-RUN chown root:ctf /flag.txt /basic-heap /start.sh && \
-    chmod 740 /flag.txt /basic-heap /start.sh
+RUN chown root:ctf /flag.txt /speakers-1 /start.sh && \
+    chmod 740 /flag.txt /speakers-1 /start.sh
 
-RUN chmod +x /basic-heap /start.sh
+RUN chmod +x /speakers-1 /start.sh
 
 CMD ["/start.sh"]
 

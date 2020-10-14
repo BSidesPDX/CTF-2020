@@ -8,7 +8,7 @@ service ctf
     type        = UNLISTED
     port        = 9999
     bind        = 0.0.0.0
-    server      = /basic-heap
+    server      = /speakers-1
     banner_fail = /etc/banner_fail
     # safety options
     per_source  = 10 # the maximum instances of this service per source IP address

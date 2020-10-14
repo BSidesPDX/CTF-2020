@@ -4,8 +4,8 @@
 #include <string.h>
 
 #define MAX_SPEAKERS 20
-#define MAX_NAME_SIZE 50
-#define MAX_DESCRIPTION_SIZE 0x100
+#define MAX_NAME_SIZE 0x100-0x8+1
+#define MAX_DESCRIPTION_SIZE 0x100-0x8+1
 
 #define TRUE 1
 #define FALSE 0
@@ -23,7 +23,12 @@ struct Speaker *get_speaker(int is_new_speaker) {
         printf("Enter the speaker ID: ");
 
         int sid = -1;
-        scanf("%d", &sid);
+        if (scanf("%d", &sid) != 1) {
+            printf("Goodbye!\n");
+            exit(0);
+        } else {
+            char tmp = getchar();
+        }
 
         if (sid == -1) {
             printf("Goodbye!\n");
@@ -34,8 +39,10 @@ struct Speaker *get_speaker(int is_new_speaker) {
             } else if (sid >= MAX_SPEAKERS) {
                 printf("You don't have enough people attending your conference to need %d speaker slots. Stay between 0 and %d.\n", sid, MAX_SPEAKERS - 1);
             } else if (is_new_speaker) {
+                printf("Creating new speaker ID %d...\n", sid);
                 struct Speaker *speaker;
                 speaker = malloc(sizeof(struct Speaker));
+                memset((void *)speaker, 0x00, sizeof(struct Speaker));
                 speaker->id = sid;
                 return speaker;
             } else if (speakers[sid] == NULL) {
@@ -54,19 +61,23 @@ void view_speaker(struct Speaker *speaker) {
 void edit_speaker(struct Speaker *speaker) {
     if (speaker->name) {
         free(speaker->name);
+        speaker->name = NULL;
     }
     printf("Enter a name: ");
     speaker->name = malloc(MAX_NAME_SIZE);
-    read(0, speaker->name, MAX_NAME_SIZE); // VULN: null byte overflow
-    strtok(speaker->name, "\n");
+    //read(0, speaker->name, MAX_NAME_SIZE); // VULN: one byte overflow
+    //strtok(speaker->name, "\n");
+    gets(speaker->name);
 
     if (speaker->description) {
         free(speaker->description);
+        speaker->description = NULL;
     }
     printf("Enter a bio: ");
     speaker->description = malloc(MAX_DESCRIPTION_SIZE);
-    read(0, speaker->description, MAX_DESCRIPTION_SIZE); // VULN: null byte overflow
-    strtok(speaker->description, "\n");
+    //read(0, speaker->description, MAX_DESCRIPTION_SIZE); // VULN: one byte overflow
+    //strtok(speaker->description, "\n");
+    gets(speaker->description);
 }
 
 int main() {
@@ -85,11 +96,16 @@ int main() {
         printf("2. Update a speaker profile\n");
         printf("3. Delete a speaker profile\n");
         printf("4. View all speakers\n");
-        printf("5. Exit");
+        printf("5. Exit ");
 
         printf("\n> ");
         int selection;
-        scanf("%d", &selection);
+        if (scanf("%d", &selection) != 1) {
+            printf("Goodbye!\n");
+            exit(0);
+        } else {
+            char tmp = getchar();
+        }
         printf("\n");
 
         struct Speaker *speaker;
@@ -115,9 +131,11 @@ int main() {
                 speaker = get_speaker(FALSE);
                 if (speaker->name) {
                     free(speaker->name);
+                    speaker->name = NULL;
                 }
                 if (speaker->description) {
                     free(speaker->description);
+                    speaker->description = NULL;
                 }
                 speakers[speaker->id] = NULL;
                 free(speaker);
@@ -138,6 +156,7 @@ int main() {
             case 5:
                 printf("Goodbye!\n");
                 exit(0);
+                printf("Where's your shell?\n");
             break;
             
             default:
