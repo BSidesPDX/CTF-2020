@@ -9,7 +9,7 @@ Can you find how he secured his stuff
 
 
 ## Deploy
-> docker build -t web100 . && docker run --publish 80:80 web100:latest
+> docker build -t web100 . && docker run --publish 8081:8081 web100:latest
 
 Author(s): 1ndo
 
