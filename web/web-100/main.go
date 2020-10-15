@@ -111,7 +111,7 @@ func security(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Welcome to the Super Secure Admin Page the MTLS Private key is.\n")
 		w.Write([]byte(WebserverPrivateKey))
 
-		fmt.Fprint(w, "\nflag: BSidesPDX{H3ad3rs_ar3_n0t_S3cur1ty_C0ntr0ls\n")
+		fmt.Fprint(w, "\nflag: BSidesPDX{H3ad3rs_ar3_n0t_S3cur1ty_C0ntr0ls}\n")
 		return
 
 	}
