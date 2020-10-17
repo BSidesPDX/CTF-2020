@@ -5,7 +5,7 @@ Tom has decided that it would be better to not use headers for security and is g
 
 
 ## Challenge 
-Can you figure out the new security systems tom has put in place work and how to gain access to the super valuable secret. Note the proxy username and password is accessable somehow. **DO NOT TRY TO BRUTE FORCE IT** Ports to look at 8082 1080
+Can you figure out the new security systems Tom has put in place works and how to gain access to the super valuable secret. Note the proxy username and password is accessable somehow. **DO NOT TRY TO BRUTE FORCE IT** Ports to look at 8082 1080
 
 
 
