@@ -108,8 +108,10 @@ func security(w http.ResponseWriter, r *http.Request) {
 	rowHeader := r.Header.Get("Rules")
 	rowEncoded := base64.StdEncoding.EncodeToString([]byte(num))
 	if rowHeader == rowEncoded {
-		fmt.Fprint(w, "Welcome to the Super Secure Admin Page the MTLS Private key is.\n")
+		fmt.Fprint(w, "Welcome to the Super Secure Admin Page.\n")
 		w.Write([]byte(WebserverPrivateKey))
+
+		fmt.Fprint(w, "\nYou are going to need that key for 200 ;)")
 
 		fmt.Fprint(w, "\nflag: BSidesPDX{H3ad3rs_ar3_n0t_S3cur1ty_C0ntr0ls}\n")
 		return
