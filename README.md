@@ -30,7 +30,7 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 | [tor-100](tor/100-tor/)                                        | tor           | 100    | 80                  |
 | [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 |
 | [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 |
-
+| [Down the rabbit hole](over-the-air/300-Down-the-rabbit-hole/) | over-the-air  | 300    | N/A                 |
 
 
 ## Local Deployment
