@@ -5,7 +5,11 @@
 BSidesPDX CTF 2020 is using the [bsides-ctf-framework](https://github.com/BSidesPDX/bsides-ctf-framework). See [TTimzen's blog post](https://www.tophertimzen.com/blog/BSidesPDXCTFFramework/) for a detailed explanation of the framework, motivations, and instructions for writing challenges.
 
 Challenge authors:
-- <Add yourself here when submitting a PR>
+- [aagallag](https://twitter.com/aagallag)
+- [arinerron](https://twitter.com/arinerron)
+- [0xdade](https://twitter.com/0xdade)
+- [fdcarl](https://twitter.com/fdcarl)
+- [0x1nd0](https://twitter.com/0x1nd0)
 
 
 ## Final Statistics
