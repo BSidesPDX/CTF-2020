@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pwn300
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pwn300
+  template:
+    metadata:
+      name: pwn300
+      labels:
+        app: pwn300
+    spec:
+      containers:
+        - name: pwn300
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/pwn300:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 9999
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
