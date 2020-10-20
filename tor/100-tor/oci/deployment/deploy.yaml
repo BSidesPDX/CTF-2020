@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tor100
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tor100
+  template:
+    metadata:
+      name: tor100
+      labels:
+        app: tor100
+    spec:
+      containers:
+        - name: tor100
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/tor100:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: hostname
+              mountPath: /app/onion_hostname/
+            - name: private-key
+              mountPath: /app/onion_private_key/
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
+      volumes:
+      - name: hostname
+        secret:
+          secretName: tor100-hostname
+      - name: private-key
+        secret:
+          secretName: tor100-private-key
