@@ -1,4 +1,4 @@
-# 100 - basic-bof
+# 100 - basic-bof-2
 
 ## Description
 
@@ -12,7 +12,7 @@ In `src/`, run `./compile.sh`. Then, the `Dockerfile` is ready to go. Provide `b
 
 ## Challenge
 
-Welcome to basic bof. [Where can you return to now?](https://github.com/david942j/one_gadget)
+Welcome to basic bof #2. [Where can you return to now?](https://github.com/david942j/one_gadget)
 
 Author(s): arinerron
 

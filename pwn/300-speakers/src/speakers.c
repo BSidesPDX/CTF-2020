@@ -23,7 +23,7 @@ int main() {
     setbuf(stderr, NULL);
     alarm(120);
 
-    printf("Welcome to the BSidesPDX Speaker Management software.\n* You can determine which libc version remote is running using the provided Dockerfile or by leaking an address from remote.\n* Learn about the heap: https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/\n* Hint: to pwn this, figure out how to implement a House of Botcake style attack\nGood luck!\n");
+    printf("Welcome to the BSidesPDX Speaker Management software.\n* You can determine which libc version remote is running using the provided Dockerfile or by leaking an address from remote.\n* Learn about the heap here: https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/\n* If you can, use gdb-gef's excellent `heap bins` / `heap chunks` commands to debug your solve script.\n* Hint: to pwn this, basicaly, figure out how to implement a House of Botcake style attack\nGood luck!\n");
 
     ops = 0;
     while(1) {
