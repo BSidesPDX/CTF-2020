@@ -1,4 +1,4 @@
-# Web-100-Heading-the-Right-Way
+# 100 - Heading the Right Way
 
 ## Description
 Tom is new to web app dev and has decided to try to make a secure page for his secrets. This usually doesnt go very well.
