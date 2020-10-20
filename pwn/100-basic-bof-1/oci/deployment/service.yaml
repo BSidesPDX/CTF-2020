@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: pwn100
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: basic-bof.bsidespdxctf.party
+    external-dns.alpha.kubernetes.io/hostname: basic-bof-1.bsidespdxctf.party
 spec:
   ports:
    - port: 9999
