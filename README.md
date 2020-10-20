@@ -16,7 +16,16 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 
 | Challenge Name                                                 | Category      | Points | Port(s)             |
 | -------------------------------------------------------------- | ------------- | ------ | ------------------- |
-|  <Add challenge information here>              |       |     |                 |
+| [Sowing Discord](intro/)                                       | intro         | 10     | N/A                 |
+| [Flag Vault](re/100-flagvault/)                                | re            | 100    | N/A                 |
+| [Heading the Right Way](web/100-heading-the-right-way/)        | web           | 100    | 8081                |
+| [SOCKING IT TO YA](web/200-socking-it-to-ya/)                  | web           | 200    | 8081, 8082, 1080    |
+| [basic-bof](pwn/100-basic-bof/)                                | pwn           | 100    | 9999                |
+| [speakers-1](pwn/200-speakers-1/)                              | pwn           | 200    | 9999                |
+| [tor-100](tor/100-tor/)                                        | tor           | 100    | 80                  |
+| [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 |
+| [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 |
+
 
 
 ## Local Deployment
