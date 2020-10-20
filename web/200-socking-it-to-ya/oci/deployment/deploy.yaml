@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web200
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web200
+  template:
+    metadata:
+      name: web200
+      labels:
+        app: web200
+    spec:
+      containers:
+        - name: web200
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/web200:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 8081
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
