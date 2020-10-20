@@ -1,7 +1,7 @@
 OCIR_URL := phx.ocir.io
 TENANCY := ax8lv72xb3nu
 REGISTRY := bsidespdx2020
-DOCKER_IMAGE := pwn100
+DOCKER_IMAGE := pwn200
 
 CONTAINER_TAG := ${OCIR_URL}/${TENANCY}/${REGISTRY}/${DOCKER_IMAGE}
 
@@ -32,4 +32,4 @@ serve:
 deleteKube:
 	cat deployment/deploy.yaml | kubectl delete --namespace bsidespdxctf -f -
 	kubectl delete --namespace bsidespdxctf -f deployment/service.yaml
-	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain basic-bof.bsidespdxctf.party --force
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain basic-bof-2.bsidespdxctf.party --force
