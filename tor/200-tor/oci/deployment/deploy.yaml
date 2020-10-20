@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tor200
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tor200
+  template:
+    metadata:
+      name: tor200
+      labels:
+        app: tor200
+    spec:
+      containers:
+        - name: tor200
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/tor200:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: hostname
+              mountPath: /app/onion_hostname/
+            - name: private-key
+              mountPath: /app/onion_private_key/
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
+      volumes:
+      - name: hostname
+        secret:
+          secretName: tor200-hostname
+      - name: private-key
+        secret:
+          secretName: tor200-private-key
