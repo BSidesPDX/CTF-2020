@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pwn100
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pwn100
+  template:
+    metadata:
+      name: pwn100
+      labels:
+        app: pwn100
+    spec:
+      containers:
+        - name: pwn100
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/pwn100:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 9999
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
