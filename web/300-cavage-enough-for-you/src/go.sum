@@ -1,0 +1,4 @@
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
+github.com/spacemonkeygo/httpsig v0.0.0-20181218213338-2605ae379e47 h1:D6lKRCfVBP62fSVFfyHC5tBHqMmPnnybE5ow5hL/Erc=
+github.com/spacemonkeygo/httpsig v0.0.0-20181218213338-2605ae379e47/go.mod h1:6oPz9W+aPr7nJenCtJydg3ymdOoZTjVYiOogh7FDIQY=

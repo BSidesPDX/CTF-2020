@@ -1,0 +1,6 @@
+# github.com/gorilla/mux v1.8.0
+## explicit
+github.com/gorilla/mux
+# github.com/spacemonkeygo/httpsig v0.0.0-20181218213338-2605ae379e47
+## explicit
+github.com/spacemonkeygo/httpsig
