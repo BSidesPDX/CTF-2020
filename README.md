@@ -22,6 +22,8 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 | -------------------------------------------------------------- | ------------- | ------ | ------------------- |
 | [Sowing Discord](intro/)                                       | intro         | 10     | N/A                 |
 | [Flag Vault](re/100-flagvault/)                                | re            | 100    | N/A                 |
+| [flagvault.c](re/200-flagvault.c/)                             | re            | 200    | N/A                 |
+| [cheatcode](re/300-cheatcode/)                                 | re            | 300    | N/A                 |
 | [Heading the Right Way](web/100-heading-the-right-way/)        | web           | 100    | 8081                |
 | [SOCKING IT TO YA](web/200-socking-it-to-ya/)                  | web           | 200    | 8081, 8082, 1080    |
 | [basic-bof-1](pwn/100-basic-bof-1/)                            | pwn           | 100    | 9999                |
