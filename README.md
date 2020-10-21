@@ -49,4 +49,4 @@ To locally test, deploy or play challenges with Docker, run the following (Ubunt
 
 ## Cloud Deployment
 
-This year we ran all of our challenges in k8s using the Makefile and yamls in the `oci` directory of all pwn and web challenges.  Due to Docker issues with Trust Game, this was manually deployed to a standalone compute instance.
+This year we ran all of our challenges in k8s using the Makefile and yamls in the `oci` directory of all pwn, web, and tor challenges.  The Over-the-Air challenges had a Twilio bot and were streaming to Twitch on a seperate VM.  We've done our best to include all of the tools and information required to stand-up the Over-the-Air challenges locally, but due to the use of Twilio, it will be difficult to replicate the challenge: `Down the rabbit hole` in it's entirety.
