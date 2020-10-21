@@ -30,6 +30,7 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 | [basic-bof-2](pwn/200-basic-bof-2/)                            | pwn           | 200    | 9999                |
 | [speakers](pwn/300-speakers/)                                  | pwn           | 300    | 9999                |
 | [tor-100](tor/100-tor/)                                        | tor           | 100    | 80                  |
+| [tor-200](tor/200-tor/)                                        | tor           | 200    | 80                  |
 | [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 |
 | [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 |
 | [Down the rabbit hole](over-the-air/300-Down-the-rabbit-hole/) | over-the-air  | 300    | N/A                 |
