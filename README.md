@@ -29,9 +29,9 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 | [basic-bof-1](pwn/100-basic-bof-1/)                            | pwn           | 100    | 9999                |
 | [basic-bof-2](pwn/200-basic-bof-2/)                            | pwn           | 200    | 9999                |
 | [speakers](pwn/300-speakers/)                                  | pwn           | 300    | 9999                |
-| [tor-100](tor/100-tor/)                                        | tor           | 100    | 80                  |
-| [tor-200](tor/200-tor/)                                        | tor           | 200    | 80                  |
-| [tor-300](tor/300-tor/)                                        | tor           | 300    | 80                  |
+| [Default Onion](tor/100-default-onion/)                        | tor           | 100    | 80                  |
+| [Default Onion - Fixed](tor/200-default-onion-fixed/)          | tor           | 200    | 80                  |
+| [Microblog](tor/300-microblog/)                                | tor           | 300    | 80                  |
 | [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 |
 | [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 |
 | [Down the rabbit hole](over-the-air/300-Down-the-rabbit-hole/) | over-the-air  | 300    | N/A                 |
