@@ -8,7 +8,7 @@ If the user gives a URL, it first does a HEAD request to attempt to ensure the U
 
 ## Deploy
 
-Build and run the Docker container.
+> docker build -t tor300 . && docker run --rm -ti -p 80:80 -v %{PWD}/onion_hostname/:/app/onion_hostname -v %{PWD}/onion_private_key:/app/onion_private_key tor300:latest
 
 ## Challenge
 
