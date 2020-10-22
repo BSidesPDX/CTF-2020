@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web300
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: cavage-enough-for-you.bsidespdxctf.party
+spec:
+  ports:
+   - port: 1337
+     targetPort: 1337
+  selector:
+    app: web300
+  type: LoadBalancer
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web300
+spec:
+  podSelector:
+    matchLabels:
+      app: web300
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - ports:
+    - port: 1337
+    from: []
