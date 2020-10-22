@@ -10,7 +10,7 @@ All challenges in the Over The Air category are deployed to an OCI instance stre
 
 ## Challenge
 
-During one of the commercial breaks of my favorite state sponsored educational video, there was some interference once again. There was a woman wearing some sort of facemasl and there were strange tones. The tones were familiar and rang a bell, but I couldn't quite put my finger on them. I don't know what these things mean, but maybe you can figure it out.
+During one of the commercial breaks of my favorite state sponsored educational video, there was some interference once again. There was a woman wearing some sort of facemask and there were strange tones. The tones were familiar and rang a bell, but I couldn't quite put my finger on them. I don't know what these things mean, but maybe you can figure it out.
 
 twitch.tv/over_the_air
 
