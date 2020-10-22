@@ -10,8 +10,13 @@ Can you figure out what he messed up when making his api?
 
 
 ## Deploy
-
+### server
 >docker build -t web300 . && docker run -p 1337:1337 web300:latest
+
+### client
+Change env varable in Dockerfile
+>docker build -t web300-client . && docker run  web300-client:latest
+
 
 
 ## Flag
