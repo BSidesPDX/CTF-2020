@@ -12,21 +12,16 @@ import (
 )
 
 var (
-	numArgs      = len(os.Args)
-	sockProxy    string
-	httpProxy    string
-	ip           string
-	proxyAddr    string
-	client       http.Client
-	defProxyPort      = "1080"
-	httpBool     bool = false
-	socksBool    bool = false
+	client    http.Client
+	httpBool  bool = false
+	socksBool bool = false
 )
 
 func clientfire(ep string) {
 
-	if err != nil {
-		log.Fatalln(err)
+	host, ok := os.LookupEnv("SERVERIP")
+	if !ok {
+		log.Fatalln("environment var was not set")
 	}
 
 	privateKey := keypkcs8
@@ -47,7 +42,7 @@ func clientfire(ep string) {
 		Transport: &http.Transport{},
 	}
 
-	request, err := http.NewRequest("GET", "http://localhost:"+config.Port+"/"+ep, bytes.NewBufferString(""))
+	request, err := http.NewRequest("GET", "http://"+host+":1337/"+ep, bytes.NewBufferString(""))
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -58,6 +53,7 @@ func clientfire(ep string) {
 		log.Fatalln(err)
 	}
 	log.Println(tets)
+
 	resp, err := client.Do(tets)
 	if err != nil {
 		log.Fatalln(err)
@@ -70,4 +66,22 @@ func clientfire(ep string) {
 	}
 	log.Println(string(body))
 
+}
+
+func repete() {
+
+	endpoints := [5]string{"flagp1", "flagp2", "flagp3", "flagp4", "flagp5"}
+
+	for true {
+		for _, endpoint := range endpoints {
+
+			clientfire(endpoint)
+
+		}
+		time.Sleep(time.Second * 30)
+	}
+}
+
+func main() {
+	repete()
 }

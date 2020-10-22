@@ -121,7 +121,7 @@ func handleRequests() {
 	router.HandleFunc("/addkey", newKey).Methods("POST")
 	router.HandleFunc("/hello", requestLogger(checkSecurity(hello)))
 	router.HandleFunc("/logs", checkSecurity(logreader))
-	router.HandleFunc("/flagp1", checkAdmin(requestLogger(flagp1)))
+	router.HandleFunc("/flagp1", requestLogger(checkAdmin(flagp1)))
 	router.HandleFunc("/flagp2", requestLogger(checkAdmin(flagp2)))
 	router.HandleFunc("/flagp3", requestLogger(checkAdmin(flagp3)))
 	router.HandleFunc("/flagp4", requestLogger(checkAdmin(flagp4)))
@@ -229,27 +229,23 @@ func checkAdmin(next http.HandlerFunc) http.HandlerFunc {
 }
 func requestLogger(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		//start := time.Now()
-
-		// log request by who(IP address)
-		//requesterIP := r.RemoteAddr
+		start := time.Now()
 
 		next.ServeHTTP(w, r)
 
+		// log request by who(IP address)
+		requesterIP := r.RemoteAddr
+
+		log.Printf(
+			"%s\t\t%s\t\t%s\t\t%s\t\t%v\t\t%s",
+			r.Method,
+			r.Host+r.URL.Path,
+			r.RequestURI,
+			requesterIP,
+			time.Since(start),
+			r.Header)
+
 	})
-}
-func repete() {
-
-	endpoints := [5]string{"flagp1", "flagp2", "flagp3", "flagp4", "flagp5"}
-
-	for true {
-		for _, endpoint := range endpoints {
-
-			clientfire(endpoint)
-
-		}
-		time.Sleep(time.Second * 30)
-	}
 }
 
 // main function to boot up everything
@@ -261,8 +257,6 @@ func main() {
 	}
 	defer logFile.Close()
 	log.SetOutput(logFile)
-
-	go repete()
 
 	handleRequests()
 
