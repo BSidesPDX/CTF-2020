@@ -7,7 +7,7 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 10
 
     MAX_CONTENT_LENGTH = 1024 * 1024
     UPLOAD_EXTENSIONS = ['jpg', 'png']
