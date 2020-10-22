@@ -1,8 +1,0 @@
-server {
-    listen 127.0.0.1:8080;
-    server_name 127.0.0.1 qx3ruxhhorp2bb37.onion;
-    location / {
-        include proxy_params;
-        proxy_pass http://unix:/home/fcarl/microblog/microblog.sock;
-    }
-}
