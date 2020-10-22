@@ -8,6 +8,7 @@ from datetime import datetime
 from werkzeug.urls import url_parse
 from werkzeug.utils import secure_filename
 from sqlalchemy import or_
+from PIL import Image, UnidentifiedImageError
 import os
 import io
 import imghdr
@@ -114,7 +115,7 @@ def edit_profile():
                         headers = {'Flag': "BSidesPDX{3veR_7r!ed_t0_sSrF_4n_0n!on?}"}
                         r = requests.get(form.file_url.data, allow_redirects=True, headers=headers)
                         file_ext = validate_image(io.BytesIO(r.content))
-                        if file_ext[1:] not in app.config['UPLOAD_EXTENSIONS']:
+                        if file_ext is None or file_ext[1:] not in app.config['UPLOAD_EXTENSIONS']:
                             return render_template('500.html')
                         path = os.path.join(app.config['UPLOAD_PATH'], filename + file_ext)
                         open(path, 'wb').write(r.content)
@@ -134,6 +135,14 @@ def edit_profile():
     return render_template('edit_profile.html', title='Edit Profile',
                            form=form)
 def validate_image(stream):
+    # Check w/ PIL
+    try:
+        Image.open(stream)
+    except (FileNotFoundError, UnidentifiedImageError):
+        return None
+
+    # Double check w/ imghdr and get format
+    stream.seek(0)
     header = stream.read(512)
     stream.seek(0) 
     format = imghdr.what(None, header)
