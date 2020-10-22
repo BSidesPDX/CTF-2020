@@ -1,0 +1,15 @@
+<table class="table table-hover">
+        <tr>
+            <td width="70px">
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    <img src="{{ post.author.avatar(70) }}" style="width:70px;height:70px;"/>
+                </a>
+            </td>
+            <td>
+                <b>{{ post.author.username }}</b>
+                says:
+                <br>
+                {{ post.body }}
+            </td>
+        </tr>
+    </table>
