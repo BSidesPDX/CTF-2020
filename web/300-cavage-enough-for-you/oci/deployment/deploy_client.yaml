@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web300-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web300-client
+  template:
+    metadata:
+      name: web300-client
+      labels:
+        app: web300-client
+    spec:
+      containers:
+        - name: web300-client
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/web300_client:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 1337
+          env:
+          - name: SERVERIP
+            value: "web300-server.bsidespdxctf"
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret

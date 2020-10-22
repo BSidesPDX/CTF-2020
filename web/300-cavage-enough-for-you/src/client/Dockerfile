@@ -16,7 +16,7 @@ RUN go build -o /src/300/300 /src/300/*.go
 
 FROM scratch
 #ENV SERVERIP cavage-enough-for-you.bsidespdxctf.party
-ENV SERVERIP 192.168.1.118
+#ENV SERVERIP 192.168.1.118
 COPY --from=builder /src/300/300 /300-client
 
 

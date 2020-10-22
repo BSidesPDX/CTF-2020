@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web300
+  name: web300-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web300
+      app: web300-server
   template:
     metadata:
-      name: web300
+      name: web300-server
       labels:
-        app: web300
+        app: web300-server
     spec:
       containers:
-        - name: web300
-          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/web300:latest
+        - name: web300-server
+          image: phx.ocir.io/ax8lv72xb3nu/bsidespdx2020/web300_server:latest
           imagePullPolicy: Always
           securityContext:
             privileged: false
