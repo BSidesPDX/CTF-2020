@@ -26,6 +26,7 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 | [cheatcode](re/300-cheatcode/)                                 | re            | 300    | N/A                 |
 | [Heading the Right Way](web/100-heading-the-right-way/)        | web           | 100    | 8081                |
 | [SOCKING IT TO YA](web/200-socking-it-to-ya/)                  | web           | 200    | 8081, 8082, 1080    |
+| [Cavage Enough for You](web/300-cavage-enough-for-you/)        | web           | 300    | 1337                |
 | [basic-bof-1](pwn/100-basic-bof-1/)                            | pwn           | 100    | 9999                |
 | [basic-bof-2](pwn/200-basic-bof-2/)                            | pwn           | 200    | 9999                |
 | [speakers](pwn/300-speakers/)                                  | pwn           | 300    | 9999                |
