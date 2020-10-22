@@ -14,6 +14,8 @@ cp app.db.orig app.db
 
 #exec gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app
 
+mkdir static
+
 cp deployment/nginx.conf /etc/nginx/
 cp deployment/microblog /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/microblog /etc/nginx/sites-enabled
