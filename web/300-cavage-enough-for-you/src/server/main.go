@@ -103,6 +103,7 @@ func newKey(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Fprintf(w, "\nKey Loaded\n")
 	fmt.Fprintf(w, "\nOther Endpoints you have access to are the following\n\n /hello\n/logs\n/ascii\n ")
+	fmt.Fprintf(w, "\nDont forget to sign your (request-target), host, date.\n")
 
 	return
 }

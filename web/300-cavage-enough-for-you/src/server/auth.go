@@ -16,7 +16,7 @@ func IsSignatureValid(r *http.Request) error {
 
 	verifier := httpsig.NewVerifier(getter)
 
-	verifier.SetRequiredHeaders([]string{"(request-target)", "host", "date", "expire"})
+	verifier.SetRequiredHeaders([]string{"(request-target)", "host", "date"})
 	err = verifier.Verify(r)
 	if err != nil {
 		log.Printf("IsSignatureValid(%v) (%s)", &r, err.Error())

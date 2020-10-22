@@ -12,7 +12,7 @@ import (
 func signer(r *http.Request, privateKey crypto.PrivateKey) (*http.Request, error) {
 
 	Date := time.Now()
-	expire := Date.Add(time.Minute * 2)
+	expire := Date.Add(time.Minute * 1)
 	r.Header.Set("Date", Date.String())
 	r.Header.Set("Host", r.Host)
 	r.Header.Set("expire", expire.String())
