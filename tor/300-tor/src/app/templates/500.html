@@ -4,5 +4,8 @@
     <h1>An unexpected error has occurred</h1>
     <p>The administrator has not been notified, because this is a dumb CTF app.</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/QEzhxP-pdos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+    {% if hint %}
+    <p>{{ hint }}</p>
+    {% endif %}
     <p><a href="{{ url_for('index') }}">Back</a></p>
 {% endblock %}

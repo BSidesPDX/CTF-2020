@@ -106,9 +106,9 @@ def edit_profile():
                     'Content-Length' in h.headers and \
                     'Content-Type' in h.headers:
                         if int(h.headers['Content-Length']) > app.config['MAX_CONTENT_LENGTH']:
-                            return render_template('500.html')
+                            return render_template('500.html', hint="Content too large, max of 1MB")
                         if not h.headers['Content-Type'].lower().startswith('image/'):
-                            return render_template('500.html')
+                            return render_template('500.html', hint="Content does not appear to be an image type")
 
                         filename = str(uuid.uuid4())
                         headers = {'Flag': "BSidesPDX{3veR_7r!ed_t0_sSrF_4n_0n!on?}"}
