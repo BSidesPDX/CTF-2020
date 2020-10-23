@@ -7,12 +7,12 @@ This challenge was hosted at http://heading-the-right-way.bsidespdxctf.party:808
 
 The challenge drops you on a website that only has a few links that are live. If you visit the rulesforwinnoing page you are greeted with
 
-The Rules to Winning
-1)cheat_to_win,2)dont_get_caught,3)never_admit,4)lawyer_up,5)buy_low,6)sell_high,7)everything_is_hackable,8)its_not_an_0_day_if_you_disclose_it,9)make_unverifiable_bold_claims 400 Bad Request 'Rules' header not found
+`The Rules to Winning`
+`1)cheat_to_win,2)dont_get_caught,3)never_admit,4)lawyer_up,5)buy_low,6)sell_high,7)everything_is_hackable,8)its_not_an_0_day_if_you_disclose_it,9)make_unverifiable_bold_claims 400 Bad Request 'Rules' header not found `
 
 The page is looking for a header called Rules
 
-If we curl http://heading-the-right-way.bsidespdxctf.party:8081/rulesforwinning -H "Rules: yolo" you will be returned  Unable to parse base64
+If we curl `http://heading-the-right-way.bsidespdxctf.party:8081/rulesforwinning -H "Rules: yolo"` you will be returned  `Unable to parse base64`
 
 So the header is looking for a base64 encoded payload if we take the rules and base64 encode them and send them as the header.
 
@@ -37,7 +37,8 @@ we will get the flag :)
 
 
 ## flag
-```-----BEGIN PRIVATE KEY-----
+```
+	-----BEGIN PRIVATE KEY-----
 	MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpQ8VV1H1O6c5D
 	8Fo/h0hMzjDtoG991q/d2NWFLHPhzKZ79bTzbfZQkyEKMujsEx3tLMZNxnaVGn5M
 	flPebGC+tYOmovZNW6l7wwEcFBZFXXx4QmQhgWfSD/AwQaOIWw2rOijvzx5vYJuF
