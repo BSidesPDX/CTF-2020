@@ -17,7 +17,7 @@ Change env varable in Dockerfile
 
 ## Challenge
 
-Tom has decided that he is tried of making a blog. Now he just wants to make Ascii art and have an api to access it. He has even let others use it.
+Tom has decided that he is tired of making a blog. Now he just wants to make Ascii art and have an api to access it. He has even let others use it.
 
 Can you figure out what he messed up when making his api?
 
