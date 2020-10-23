@@ -16,4 +16,4 @@ twitch.tv/over_the_air
 
 Author(s): 0xdade & fdcarl
 
-Flag: `BSidesPDX{b3_sUR3_T0_dr!nk_y0Ur_Ov4ltine3}`
+Flag: `BSidesPDX{b3_sUR3_T0_dr!nk_y0Ur_Ov4ltin3}`
