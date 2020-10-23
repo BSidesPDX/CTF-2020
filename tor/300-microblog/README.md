@@ -14,6 +14,8 @@ If the user gives a URL, it first does a HEAD request to attempt to ensure the U
 
 I stumbled across a hidden microblogging service, if there was only some way to get the server side to leak some info.
 
+[http://bsidespdxcgjccaz.onion](http://bsidespdxcgjccaz.onion)
+
 Author(s): fdcarl
 
 Flag: `BSidesPDX{3veR_7r!ed_t0_sSrF_4n_0n!on?}`
