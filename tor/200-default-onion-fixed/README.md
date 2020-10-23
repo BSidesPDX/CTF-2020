@@ -10,7 +10,7 @@ Build and run the Docker container.
 
 ## Challenge
 
-Oops, I fixed the bug in the previous Tor challenge.
+Oops, I fixed the bug in the previous Tor challenge. Now only I can access it locally, so good luck all you lame hackers.
 
 Author(s): fdcarl
 
