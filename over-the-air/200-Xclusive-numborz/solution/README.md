@@ -2,7 +2,7 @@
 
 ## Finding the challenge
 
-The challenge is a section of the twitch stream being looped on twitch.tv/over_the_air. It is signaled by a short rendition of Bella Ciao (played by yours truly), and the image found in the src repository.
+The challenge is a section of the twitch stream being looped on twitch.tv/over_the_air. It is signaled by a short rendition of Bella Ciao (played by yours truly) at approximately 7 minutes into the video during the school scene in the Duck and Cover video where Betty is asking her teacher a question.
 
 
 ## Capturing the challenge
