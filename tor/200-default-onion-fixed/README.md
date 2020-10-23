@@ -12,6 +12,8 @@ Build and run the Docker container.
 
 Oops, I fixed the bug in the previous Tor challenge. Now only I can access it locally, so good luck all you lame hackers.
 
+[http://bsidespdxojp6j7d.onion](http://bsidespdxojp6j7d.onion)
+
 Author(s): fdcarl
 
 Flag: `BSidesPDX{pLz_ju5T_Us3_nG!nX_inS7e4D}`
