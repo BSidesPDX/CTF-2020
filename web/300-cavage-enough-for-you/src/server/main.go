@@ -9,6 +9,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/gorilla/mux"
@@ -26,6 +27,17 @@ type tcpKeepAliveListener struct {
 
 var keystore = httpsig.NewMemoryKeyStore()
 var flag = [5]string{"BSidesPDX", "{HTTP_CAVAG3_", "S1GnaTur3s_Ar", "3_R3a11y_", "c001}"}
+
+const alpha = "abcdefghijklmnopqrstuvwxyz1234567890"
+
+func alphaOnly(s string) bool {
+	for _, char := range s {
+		if !strings.Contains(alpha, strings.ToLower(string(char))) {
+			return false
+		}
+	}
+	return true
+}
 
 func adminkeyload() {
 
@@ -91,11 +103,19 @@ func newKey(w http.ResponseWriter, r *http.Request) {
 
 	pub, err := x509.ParsePKIXPublicKey(pubkeydecode.Bytes)
 	if err != nil {
-		log.Fatal(err)
+		w.WriteHeader(http.StatusBadRequest)
+		fmt.Fprintf(w, "Invalid key")
+		return
 	}
 	if keyreq.KID == "admin" {
 		w.WriteHeader(http.StatusBadRequest)
 		w.Write([]byte("Invalid KID"))
+		return
+	}
+
+	check := alphaOnly(keyreq.KID)
+	if check != true {
+		fmt.Fprintf(w, "Invalid string in KID")
 		return
 	}
 
