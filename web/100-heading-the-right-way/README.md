@@ -2,7 +2,7 @@
 
 ## Description
 
-TODO
+This challenge is doing authentication with a header you will need to figure out what header is missing and what value it is looking for.
 
 
 ## Deploy
