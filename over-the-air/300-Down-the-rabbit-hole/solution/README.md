@@ -35,5 +35,5 @@ Either way, once you can get to the point of decoding the SSTV signal, you shoul
 ## Flag
 
 ```
-BSidesPDX{b3_sUR3_T0_dr!nk_y0Ur_Ov4ltine3}
+BSidesPDX{b3_sUR3_T0_dr!nk_y0Ur_Ov4ltin3}
 ```
