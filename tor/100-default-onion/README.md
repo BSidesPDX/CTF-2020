@@ -12,6 +12,8 @@ Build and run the Docker container.
 
 I found this Tor hidden service.  Are you able to leak any underlying information about it?
 
+[http://bsidespdxcgjccaz.onion](http://bsidespdxcgjccaz.onion)
+
 Author(s): 0xdade
 
 Flag: `BSidesPDX{4p4ch3_s3rv3r_st4tus_1s_l34ky}`
