@@ -12,7 +12,7 @@ This challenge is doing authentication with a header you will need to figure out
 
 ## Challenge
 
-Tom is new to web app dev and has decided to try to make a secure page for his secrets. This usually doesnt go very well.
+Tom is new to web app dev and has decided to try to make a secure page for his secrets. This usually doesn't go very well.
 
 Can you find how he secured his stuff
 
