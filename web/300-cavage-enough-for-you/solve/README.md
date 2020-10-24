@@ -24,7 +24,9 @@ The first thing you need to do is to upload a public key to the api
 `openssl rsa -pubout -in key.pem -out key_public.pem`
 
 As the API is looking for JSON formatted data you will need to remove the spaces and replace them with escapes
+
 `cat key_public.pem |sed ':a;N;$!ba;s/\n/\\n/g' | sed 's/ *$//' >key_public_nosp.pem`
+
 `truncate -s -1 key_public_nosp.pem`
 
 Once you have created your public key you will need to submit it to the api .
