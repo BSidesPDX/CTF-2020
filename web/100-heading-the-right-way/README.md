@@ -16,6 +16,6 @@ Tom is new to web app dev and has decided to try to make a secure page for his s
 
 Can you find how he secured his stuff
 
-Author(s): 1nd0
+Author(s): [0x1nd0](https://twitter.com/0x1nd0)
 
 Flag: `BSidesPDX{H3ad3rs_ar3_n0t_S3cur1ty_C0ntr0ls}`
