@@ -38,7 +38,7 @@ This challenge was hosted at http://socking-it-to-ya.bsidespdxctf.party ports op
 ## Solution
 The Challenge drops you on a website that once again only has a few live links. One of the links directs you to another port `8081/security` with an SSL error. and the other downloads what looks like a PDF. There is also a port `1080` if you connect to it you get an authentication error .
 
-First Download the "rules.pdf" if we run file on it we find out that it is infact a jpg. If we run stegohide on the rules.jpg we find out that there is a secret.txt file inside
+First Download the "rules.pdf" if we run file on it we find out that it is in fact a jpg. If we run steghide on the rules.jpg we find out that there is a secret.txt file inside
 
 `steghide extract -sf The_rules.pdf`
 
@@ -47,7 +47,7 @@ Inside the secret.txt we find that there are some credentials.
 `Username:Jorge`
 `Password:82a07cc1b6cc1d05e594aeb3354da513438dc9695d3d15f6a70adf3697ba4fef`
 
-Now that we have the Credientals for the proxy if we try to connect to the security page we still get the client certificate warning.
+Now that we have the credentials for the proxy if we try to connect to the security page we still get the client certificate warning.
 
 There is a hint on the main page about whats going on here. The server is doing mutual TLS. Well we are given a private key to start the challenge so by grabbing the public certificate from the port `8081` using openssl 
 `openssl s_client -connect socking-it-to-ya.bsidespdxctf.party:8081`
@@ -76,7 +76,10 @@ eMlVoeqf4sR3LlSG6HWz/lIATxd/qCYXHGWufNDcrAtDPtG/m49VLnpXYQ+ZgtZY
 ofBLvPq2RyeAtbIXt/AmJ339Xq3b7gODwWgU85XXaacm
 -----END CERTIFICATE-----
 ```
+
 Now if we do a curl to the server through the proxy to `socking-it-to-ya.bsidespdxctf.party:8081/security/` we are given the flag and some awesome ascii art :)
+
+
 `curl -k -x socks5://Jorge:82a07cc1b6cc1d05e594aeb3354da513438dc9695d3d15f6a70adf3697ba4fef@socking-it-to-ya.bsidespdxctf.party:1080 --key key.pem --cert localhost.pem https://localhost:8081/security`
 
 ```
