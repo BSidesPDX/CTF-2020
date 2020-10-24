@@ -275,7 +275,7 @@ print('done')
 
 Now this binary won't actually run correctly, but maybe we can get ghidra to decompile the function for us though!
 
-So after we load `flagvault.patched` back into Ghidra, let's go to `DAT_001030e0` (`Navigation -> Go To` in Ghidra toolbard, and enter `001030e0`).
+So after we load `flagvault.patched` back into Ghidra, let's go to `DAT_001030e0` (`Navigation -> Go To` in Ghidra toolbar, and enter `001030e0`).
 
 
 Now do `Right Click -> Disassemble` on the first byte of `DAT_001030e0`.  You should now have disassembly for the function!
