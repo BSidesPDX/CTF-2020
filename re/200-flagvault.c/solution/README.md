@@ -254,7 +254,8 @@ How do we make Ghidra disassemble the cipher'ed function?  Let's write a python 
 #!/usr/bin/env python2
 
 with open('flagvault', 'rb') as f:
-	data = f.read(0x001030e0) # 001030e0 is location of ciphered function
+	# 0x000030e0 is location of DAT_001030e0 (ciphered function), since the binary starts at 0x00100000 in ghidra
+	data = f.read(0x000030e0)
 	ciphered_func = f.read(0x295) # 0x295 is length of the ciphered function
 	unciphered_func = ''
 	# uncipher the function
