@@ -40,3 +40,15 @@ services:
       context: ./web/300-cavage-enough-for-you/src/server/
     ports:
       - 1337:1337
+  100-tor:
+    container_name: default-onion
+    build:
+      context: ./tor/100-default-onion/src/
+  200-tor:
+    container_name: default-onion-fixed
+    build:
+      context: ./tor/200-default-onion-fixed/src/
+  300-tor:
+    container_name: microblog
+    build:
+      context: ./tor/300-microblog/src/

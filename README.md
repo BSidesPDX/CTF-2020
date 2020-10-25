@@ -30,9 +30,9 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 | [basic-bof-1](pwn/100-basic-bof-1/)                            | pwn           | 100    | 9999                | 9990                |
 | [basic-bof-2](pwn/200-basic-bof-2/)                            | pwn           | 200    | 9999                | 9991                |
 | [speakers](pwn/300-speakers/)                                  | pwn           | 300    | 9999                | 9991                |
-| [Default Onion](tor/100-default-onion/)                        | tor           | 100    | 80                  | 80                  |
-| [Default Onion - Fixed](tor/200-default-onion-fixed/)          | tor           | 200    | 80                  | 81                  |
-| [Microblog](tor/300-microblog/)                                | tor           | 300    | 80                  | 82                  |
+| [Default Onion](tor/100-default-onion/)                        | tor           | 100    | N/A                 | N/A                 |
+| [Default Onion - Fixed](tor/200-default-onion-fixed/)          | tor           | 200    | N/A                 | N/A                 |
+| [Microblog](tor/300-microblog/)                                | tor           | 300    | N/A                 | N/A                 |
 | [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 | N/A                 |
 | [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 | N/A                 |
 | [Down the rabbit hole](over-the-air/300-Down-the-rabbit-hole/) | over-the-air  | 300    | N/A                 | N/A                 |
@@ -43,10 +43,15 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 To locally test, deploy or play challenges with Docker, run the following (Ubuntu)
 
 1. `sudo apt install docker-compose`
-2. `sudo docker-compose up -d`
+2. `sudo docker-compose build && docker-compose up -d`
 3. Containers are viewable at localhost:PORT (view with docker-compose ps)
-4. `docker-compose down` to stop the containers
+4. `sudo docker-compose down` to stop the containers
 
+### Get Onion Addresses for Tor Challenges
+
+Default Onion: `sudo docker exec -it default-onion cat /var/lib/tor/hidden_http/hostname`
+Default Onion - Fixed: `sudo docker exec -it default-onion-fixed cat /var/lib/tor/hidden_http/hostname`
+Microblog: `sudo docker exec -it microblog cat /var/lib/tor/hidden_http/hostname`
 
 ## Cloud Deployment
 
