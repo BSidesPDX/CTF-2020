@@ -1,0 +1,42 @@
+version: "3.5"
+services:
+  100-pwn:
+    build:
+      context: ./pwn/100-basic-bof-1/src/
+    ports:
+      - 9990:9999
+  200-pwn:
+    build:
+      context: ./pwn/200-basic-bof-2/src/
+    ports:
+      - 9991:9999
+  300-pwn:
+    build:
+      context: ./pwn/300-speakers/src/
+    ports:
+      - 9992:9999
+  100-web:
+    build:
+      context: ./web/100-heading-the-right-way/src/
+    ports:
+      - 8080:8081
+  200-web:
+    build:
+      context: ./web/200-socking-it-to-ya/src/
+    ports:
+      - 8081:8081
+      - 8082:8082
+      - 1080:1080
+  300-web-client:
+    build:
+      context: ./web/300-cavage-enough-for-you/src/client/
+    environment:
+      - SERVERIP=127.0.0.1
+    network_mode: host
+    depends_on:
+      - 300-web-server
+  300-web-server:
+    build:
+      context: ./web/300-cavage-enough-for-you/src/server/
+    ports:
+      - 1337:1337

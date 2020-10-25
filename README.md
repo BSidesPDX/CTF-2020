@@ -18,36 +18,34 @@ RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2
 
 ## Challenges
 
-| Challenge Name                                                 | Category      | Points | Port(s)             |
-| -------------------------------------------------------------- | ------------- | ------ | ------------------- |
-| [Sowing Discord](intro/)                                       | intro         | 10     | N/A                 |
-| [Flag Vault](re/100-flagvault/)                                | re            | 100    | N/A                 |
-| [flagvault.c](re/200-flagvault.c/)                             | re            | 200    | N/A                 |
-| [cheatcode](re/300-cheatcode/)                                 | re            | 300    | N/A                 |
-| [Heading the Right Way](web/100-heading-the-right-way/)        | web           | 100    | 8081                |
-| [SOCKING IT TO YA](web/200-socking-it-to-ya/)                  | web           | 200    | 8081, 8082, 1080    |
-| [Cavage Enough for You](web/300-cavage-enough-for-you/)        | web           | 300    | 1337                |
-| [basic-bof-1](pwn/100-basic-bof-1/)                            | pwn           | 100    | 9999                |
-| [basic-bof-2](pwn/200-basic-bof-2/)                            | pwn           | 200    | 9999                |
-| [speakers](pwn/300-speakers/)                                  | pwn           | 300    | 9999                |
-| [Default Onion](tor/100-default-onion/)                        | tor           | 100    | 80                  |
-| [Default Onion - Fixed](tor/200-default-onion-fixed/)          | tor           | 200    | 80                  |
-| [Microblog](tor/300-microblog/)                                | tor           | 300    | 80                  |
-| [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 |
-| [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 |
-| [Down the rabbit hole](over-the-air/300-Down-the-rabbit-hole/) | over-the-air  | 300    | N/A                 |
+| Challenge Name                                                 | Category      | Points | Cloud Port(s)       | Local Port(s)       |
+| -------------------------------------------------------------- | ------------- | ------ | ------------------- | ------------------- |
+| [Sowing Discord](intro/)                                       | intro         | 10     | N/A                 | N/A                 |
+| [Flag Vault](re/100-flagvault/)                                | re            | 100    | N/A                 | N/A                 |
+| [flagvault.c](re/200-flagvault.c/)                             | re            | 200    | N/A                 | N/A                 |
+| [cheatcode](re/300-cheatcode/)                                 | re            | 300    | N/A                 | N/A                 |
+| [Heading the Right Way](web/100-heading-the-right-way/)        | web           | 100    | 8081                | 8080                |
+| [SOCKING IT TO YA](web/200-socking-it-to-ya/)                  | web           | 200    | 8081, 8082, 1080    | 8081, 8082, 1080    |
+| [Cavage Enough for You](web/300-cavage-enough-for-you/)        | web           | 300    | 1337                | 1337                |
+| [basic-bof-1](pwn/100-basic-bof-1/)                            | pwn           | 100    | 9999                | 9990                |
+| [basic-bof-2](pwn/200-basic-bof-2/)                            | pwn           | 200    | 9999                | 9991                |
+| [speakers](pwn/300-speakers/)                                  | pwn           | 300    | 9999                | 9991                |
+| [Default Onion](tor/100-default-onion/)                        | tor           | 100    | 80                  | 80                  |
+| [Default Onion - Fixed](tor/200-default-onion-fixed/)          | tor           | 200    | 80                  | 81                  |
+| [Microblog](tor/300-microblog/)                                | tor           | 300    | 80                  | 82                  |
+| [Please Stand By](over-the-air/100-Please-Stand-By/)           | over-the-air  | 100    | N/A                 | N/A                 |
+| [Xclusive Numborz](over-the-air/200-Xclusive-numborz/)         | over-the-air  | 200    | N/A                 | N/A                 |
+| [Down the rabbit hole](over-the-air/300-Down-the-rabbit-hole/) | over-the-air  | 300    | N/A                 | N/A                 |
 
 
 ## Local Deployment
 
 To locally test, deploy or play challenges with Docker, run the following (Ubuntu)
 
-1. `sudo apt install docker-compose gcc-multilib g++-multilib linux-libc-dev:i386`
-2. `make`
-3. `docker-compose build && docker-compose up -d`
-4. Containers are viewable at localhost:PORT (view with docker-compose ps)
-5. `docker-compose kill` to stop the containers
-6. `make clean` to clean the source folders
+1. `sudo apt install docker-compose`
+2. `sudo docker-compose up -d`
+3. Containers are viewable at localhost:PORT (view with docker-compose ps)
+4. `docker-compose down` to stop the containers
 
 
 ## Cloud Deployment
