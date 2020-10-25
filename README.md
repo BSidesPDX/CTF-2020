@@ -50,7 +50,9 @@ To locally test, deploy or play challenges with Docker, run the following (Ubunt
 ### Get Onion Addresses for Tor Challenges
 
 Default Onion: `sudo docker exec -it default-onion cat /var/lib/tor/hidden_http/hostname`
+
 Default Onion - Fixed: `sudo docker exec -it default-onion-fixed cat /var/lib/tor/hidden_http/hostname`
+
 Microblog: `sudo docker exec -it microblog cat /var/lib/tor/hidden_http/hostname`
 
 ## Cloud Deployment
