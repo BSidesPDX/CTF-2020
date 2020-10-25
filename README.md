@@ -14,7 +14,30 @@ Challenge authors:
 
 ## Final Statistics
 
-RESERVED FOR FINAL STATISTICS. SEE [CTF-2019](https://github.com/BSidesPDX/CTF-2019/edit/master/README.md) FOR MORE.
+The CTF event ended with:
+
+* 75 teams registered
+* 135 individual players
+* 180 flags submitted
+* Every single challenge solved
+
+The most solved challenges were:
+
+* 23 solves for Heading the Right Way (web)
+* 14 solves for Please Stand By (ota)
+* 14 solves for basic-bof-1 (pwn)
+
+The least solved challenges were:
+
+* 1 solve for cheatcode (re)
+* 2 solves for Cavage Enough for You (web)
+* 2 solves for speakers (pwn)
+
+The top 3 teams were:
+
+* OSUSEC - 3938 points
+* redpwn - 3044 points
+* limsa - 3041 points
 
 ## Challenges
 
